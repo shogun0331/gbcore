@@ -7,5 +7,6 @@
     "service"
   ],
   "description": "Garibong Core Package",
-  "documentationUrl": "https://gb-framework.gitbook.io/gb-framework-docs"
+  "documentationUrl": "https://gb-framework.gitbook.io/gb-framework-docs",
+  "_fingerprint": "f5214ed68a8c087e44b70f00bd30643be2923c8c"
 }
