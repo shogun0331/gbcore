@@ -6,7 +6,9 @@
         "QuickEye.UI",
         "NaughtyAttributes.Core",
         "Unity.TextMeshPro",
-        "UnityUIExtensions"
+        "UnityUIExtensions",
+        "UnityUIExtensions.editor",
+        "GB.Utility.Editor"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
