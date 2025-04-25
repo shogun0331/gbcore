@@ -24,6 +24,16 @@ public class GBTime : AutoSingleton<GBTime>
         {
             I._dictTimeScale[key] = 1;
         }
+        if(!I._dictTimes.ContainsKey(key))
+        {
+            I._dictTimes[key] = true;
+        }
+        else
+        {
+            if(!I._dictTimes[key]) return 0;
+        }
+        
+        
         
         return I._dictTimeScale[key];
     }
