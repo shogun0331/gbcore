@@ -28,10 +28,8 @@ public class GBTime : AutoSingleton<GBTime>
         {
             I._dictTimes[key] = true;
         }
-        else
-        {
-            if(!I._dictTimes[key]) return 0;
-        }
+        
+        if(!I._dictTimes[key]) return 0;
         
         
         
