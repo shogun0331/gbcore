@@ -51,6 +51,40 @@ public class GBTime : AutoSingleton<GBTime>
             return Time.deltaTime;
         }
     }
+
+    public static float GetFixedDeltaTime(string key)
+    {
+        if(I._dictTimes.ContainsKey(key) && I._dictTimeScale.ContainsKey(key))
+        {
+            if(I._dictTimes[key]) return Time.fixedDeltaTime * I._dictTimeScale[key];
+            else return 0;
+        }
+        else
+        {
+            I._dictTimeScale[key] = 1;
+            I._dictTimes[key] = true;
+            return Time.fixedDeltaTime;
+        }
+    }
+
+    public static float GetDeltaTime(string key)
+    {
+        
+        if(I._dictTimes.ContainsKey(key) && I._dictTimeScale.ContainsKey(key))
+        {
+            if(I._dictTimes[key]) return Time.deltaTime * I._dictTimeScale[key];
+            else return 0;
+        }
+        else
+        {
+            I._dictTimeScale[key] = 1;
+            I._dictTimes[key] = true;
+            return Time.deltaTime;
+        }
+    }
+
+
+
     public void SetTimeScale(string key, float timeScale)
     {
         _dictTimeScale[key] = timeScale;
